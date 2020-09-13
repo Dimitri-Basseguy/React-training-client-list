@@ -15,8 +15,8 @@ class ClientForm extends Component {
     const id = new Date().getTime();
     const nom = this.state.nouveauClient;
 
-    this.props.onClientAdd({ id, nom });
-
+    this.props.onClientAdd({id, nom});
+    // console.log({ id, nom });
     this.setState({ nouveauClient: '' });
   };
 

@@ -10,9 +10,9 @@ import './styles.css';
 class App extends React.Component {
   state = {
     clients: [
-      {id: 1, nom: "Dimitri Basseguy"},
-      {id: 2, nom: "Bob Market"},
-      {id: 3, nom: "Kharn Pcp"},
+      { id: 1, nom: 'Dimitri Basseguy' },
+      { id: 2, nom: 'Bob Market' },
+      { id: 3, nom: 'Kharn Pcp' },
     ],
   }
 
@@ -24,8 +24,10 @@ class App extends React.Component {
   }
 
   handleAdd = (client) => {
+    console.log(client);
     const clients = [...this.state.clients];
-    clients.push({ client });
+    console.log(clients);
+    clients.push(client);
     this.setState({ clients });
   }
 
@@ -35,7 +37,11 @@ class App extends React.Component {
         <h1>Liste de clients</h1>
         <ul>
           {this.state.clients.map((client) => (
-            <Client key={client.id} details={client} onDelete={this.handleDelete} />
+            <Client
+              key={client.id}
+              details={client}
+              onDelete={this.handleDelete}
+            />
           ))}
         </ul>
         <ClientForm onClientAdd={this.handleAdd} />
