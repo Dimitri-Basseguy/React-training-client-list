@@ -18,13 +18,13 @@ const App = () => {
     const updatedClients = [...clients];
     const index = updatedClients.findIndex((client) => client.id === id);
     updatedClients.splice(index, 1);
-    setClients({ updatedClients });
+    setClients(updatedClients);
   };
 
   const handleAdd = (client) => {
     const updatedClients = [...clients];
     updatedClients.push(client);
-    setClients({ updatedClients });
+    setClients(updatedClients);
   };
 
   return (

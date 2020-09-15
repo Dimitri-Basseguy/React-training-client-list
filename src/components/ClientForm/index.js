@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const ClientForm = ({ onClientAdd }) => {
-  const [nouveauClient, setNouveauClient] = useState(''); 
+  const [nouveauClient, setNouveauClient] = useState('');
 
   const handleChange = (event) => {
     setNouveauClient(event.currentTarget.value);
